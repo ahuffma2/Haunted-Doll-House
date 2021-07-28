@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS dollHouse_db;
+CREATE DATABASE dollHouse_db;
