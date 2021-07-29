@@ -1,16 +1,17 @@
 const authorize = require ('../utils/auth');
 const router = require('express').Router();
-const { Artifact, User} = require ('../models');
+//const { Artifact, User} = require ('../models');
+
 
 router.get('/', async (req,res) => {
     try{
-
+        console.log('Hello There');
         const artifactData = await Artifact.findAll({
             attributes: { exclude: ['comments','users']},
               order: [['score','ASC']],
         });
 
-        const artifacts = 
+        //const artifacts = 
         res.render('homepage', {
             //artifacts serialized
             logged_in: req.session.logged_in, //initialized logged_in
@@ -30,3 +31,5 @@ router.get('/login', async (req, res) => {
     } catch(err) 
     { res.status(500).json(err)}
 })
+
+module.exports = router;
