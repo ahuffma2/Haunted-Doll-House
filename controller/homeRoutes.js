@@ -4,15 +4,15 @@ const { Artifact, User } = require("../models");
 
 router.get("/", async (req, res) => {
   try {
-    const artifactData = await Artifact.findAll({
-      attributes: { exclude: ["comments", "users"] },
-      order: [["score", "ASC"]],
-    });
-
-    const artifacts = res.render("homepage", {
-      //artifacts serialized
-      logged_in: req.session.logged_in, //initialized logged_in
-    });
+    // const artifactData = await Artifact.findAll({
+    //   attributes: { exclude: ["comments", "users"] },
+    //   order: [["score", "ASC"]],
+    // });
+    // const artifacts = res.render("homepage", {
+    //   //artifacts serialized
+    //   logged_in: req.session.logged_in, //initialized logged_in
+    // });
+    res.render("homepage")
   } catch (err) {
     res.status(500).json(err);
   }
