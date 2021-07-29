@@ -1,0 +1,77 @@
+
+h5 {
+    color: #6b6f7b;
+}
+a {
+    color: #7f8280;
+}
+p {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1px;
+    font-size: medium;
+}
+body {
+    background-color: #15171B;
+    color: #F2F2EE;
+}
+nav {
+    background-color: #15171B;
+}
+#products {
+    background-color: #8C8E8A;
+    padding: 2em 8em;
+}
+.page-footer {
+    background-color: #0a0a0b;
+}
+.card {
+    background-color: #F2F2EE;
+    color: #15171B;
+    box-shadow: 4px rgba(127,130,128,1);
+    -webkit-box-shadow: 4px rgba(127,130,128,1);
+    -moz-box-shadow: 4px rgba(127,130,128,1);
+}
+.card .card-action {
+    text-align: center;
+    padding: 0;
+    font-family: 'Gowun Batang', serif;
+}
+.card .card-image .card-title {
+    background-color: #15171b;
+    font-family: 'Gowun Batang', serif;
+    text-align: center;
+    width: 100%;
+    padding: .2em;
+}
+.btn {
+    width: 100%;
+    background-color: #6b6f7b;
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+}
+.btn:hover {
+    background-color: #15171b;
+}
+.btn-floating.halfway-fab {
+    background-color: #6b6f7b;
+    height: 60px;
+    width: 60px;
+}
+.btn-floating i {
+    line-height: 60px;
+}
+.pagination {
+    text-align: center;
+}
+.pagination li.active {
+    background-color: #7f8280;
+}
+.page-footer .footer-copyright {
+    display:block;
+    text-align: center;
+}
+@media only screen and (min-width: 993px) {
+.container {
+    width: 90%;
+    }
+}
