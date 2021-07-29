@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt");
 const User = require("../../models/User");
 
 // CREATE a new user
-router.post("/login", async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const userData = await User.create({
       username: req.body.username,
@@ -42,4 +42,8 @@ router.post("/login", async (req, res) => {
   }
 });
 
+<<<<<<< HEAD
 module.exports = router;
+=======
+module.exports = router;
+>>>>>>> 879b4e30f5392f147e4fd35c157eb80478c8403a
