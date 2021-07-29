@@ -33,8 +33,14 @@ Artifact.init(
             allowNull:false,
             defaultValue: 0,
         },
-        comments: {
-            type: DataTypes.ARRAY,
-        }
+    },
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: "user",
     }
 )
+
+module.exports = Artifact;

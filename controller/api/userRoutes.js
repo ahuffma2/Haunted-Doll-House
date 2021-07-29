@@ -42,8 +42,4 @@ router.post("/login", async (req, res) => {
   }
 });
 
-<<<<<<< HEAD
 module.exports = router;
-=======
-module.exports = router;
->>>>>>> 879b4e30f5392f147e4fd35c157eb80478c8403a
