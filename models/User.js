@@ -38,7 +38,7 @@ User.init(
         return createUser;
       }
     }
-  }
+  },
   {
     sequelize,
     timestamps: false,
