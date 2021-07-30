@@ -5,7 +5,7 @@ h5 {
 a {
     color: #7f8280;
 }
-p {
+p, a {
     font-family: 'Lato', sans-serif;
     letter-spacing: 1px;
     font-size: medium;
@@ -17,9 +17,28 @@ body {
 nav {
     background-color: #15171B;
 }
+nav ul a {
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
 #products {
     background-color: #8C8E8A;
     padding: 2em 8em;
+}
+#reviews {
+    background-color: #6b6f7b;
+    height: 300px;
+    width: 70%;
+    margin: 1em auto 5em auto;
+}
+#reviews p {
+    font-size: 1.2em;
+    padding: 4em 3em 1em 3em;
+}
+#socials {
+    background-color: #0a0a0b;
+    box-shadow: none;
+    margin-top: 1em;
 }
 .page-footer {
     background-color: #0a0a0b;
@@ -60,6 +79,7 @@ nav {
 .btn-floating i {
     line-height: 60px;
 }
+/* Pagination customization. */
 .pagination {
     text-align: center;
 }
@@ -70,8 +90,14 @@ nav {
     display:block;
     text-align: center;
 }
-@media only screen and (min-width: 993px) {
-.container {
-    width: 90%;
+/* Styling specific to the login page. */
+#login {
+    background-color: #F2F2EE;
+    padding: 5em;
+}
+/* Reduces padding for the product listings on smaller screens. */
+@media only screen and (max-width: 1028px) {
+#products {
+    padding:2em;
     }
 }
