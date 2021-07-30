@@ -8,7 +8,6 @@ router.get("/", async (req, res) => {
     //   attributes: { exclude: ["comments", "users"] },
     //   order: [["score", "ASC"]],
     // });
-    console.log('hello');
     res.render("homepage", {
       //artifacts serialized
       logged_in: req.session.logged_in, //initialized logged_in
