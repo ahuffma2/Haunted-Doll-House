@@ -1,5 +1,8 @@
-
-h5 {
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+}
+h2, h5 {
     color: #6b6f7b;
 }
 a {
@@ -8,7 +11,7 @@ a {
 p, a {
     font-family: 'Lato', sans-serif;
     letter-spacing: 1px;
-    font-size: medium;
+    font-size: large;
 }
 body {
     background-color: #15171B;
@@ -35,10 +38,9 @@ nav ul a {
     font-size: 1.2em;
     padding: 4em 3em 1em 3em;
 }
-#socials {
-    background-color: #0a0a0b;
-    box-shadow: none;
-    margin-top: 1em;
+#socials li{
+    display: inline;
+    margin: 0em .5em;
 }
 .page-footer {
     background-color: #0a0a0b;
