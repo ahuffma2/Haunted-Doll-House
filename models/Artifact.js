@@ -24,6 +24,10 @@ Artifact.init(
             allowNull:false,
             defaultValue:'product-example-1',
         },
+        price: {
+            type: DataTypes.DECIMAL(10,2),
+            allowNull: true,
+        },
     },
     {
         sequelize,
