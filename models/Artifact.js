@@ -22,16 +22,11 @@ Artifact.init(
         filename: {
             type: DataTypes.STRING,
             allowNull:false,
+            defaultValue:'product-example-1',
         },
-        likes: {
-            type: DataTypes.INTEGER,
-            allowNull:false,
-            defaultValue: 0,
-        },
-        dislikes: {
-            type: DataTypes.INTEGER,
-            allowNull:false,
-            defaultValue: 0,
+        price: {
+            type: DataTypes.DECIMAL(10,2),
+            allowNull: true,
         },
     },
     {
