@@ -8,11 +8,11 @@ router.get("/", async (req, res) => {
     //   attributes: { exclude: ["comments", "users"] },
     //   order: [["score", "ASC"]],
     // });
-    // const artifacts = res.render("homepage", {
-    //   //artifacts serialized
-    //   logged_in: req.session.logged_in, //initialized logged_in
-    // });
-    res.render("homepage")
+    res.render("homepage", {
+      //artifacts serialized
+      logged_in: req.session.logged_in, //initialized logged_in
+    });
+
   } catch (err) {
     res.status(500).json(err);
   }
