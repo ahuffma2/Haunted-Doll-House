@@ -31,20 +31,9 @@ User.init(
     password: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        len: [8],
-      },
     },
   },
   {
-    //   hooks: {
-    //     beforeCreate: async (createUser) => {
-    //       createUser.password = await bcrypt.hash(createUser.password, 10);
-    //       return createUser;
-    //     },
-    //   },
-    // },
-
     hooks: {
       beforeCreate: async (createUser) => {
         createUser.password = await bcrypt.hash(createUser.password, 10);
