@@ -1,6 +1,6 @@
-const User = require ('./User');
-const Artifact = require('./Artifact');
-const Post = require ('./Post');
+const User = require("./User");
+const Artifact = require("./Artifact");
+const Post = require("./Post");
 const Cart = require ('./Cart');
 
 //relations go here
