@@ -11,10 +11,6 @@ Post.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        user: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
         likes: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -31,14 +27,6 @@ Post.init(
             model: 'artifact',
             key: 'id',
         },
-        // interactedUserIDs: {
-        //     type: DataTypes.ARRAY(DataTypes.INTEGER),
-        //     allowNull: true,
-        // },
-        // comments: {
-        //     type: DataTypes.ARRAY(DataTypes.STRING),
-        //     allowNull: true,
-        // }
     },
     {
         sequelize,

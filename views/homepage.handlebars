@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/public/css/materialize.css" media="screen,projection" type="text/css">
+  <link rel="stylesheet" href="/public/css/style.css" type="text/css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Lato:wght@100;400;700&display=swap" rel="stylesheet">
@@ -12,39 +13,36 @@
   <title>Haunted Dollhouse</title>
 </head>
 <body>
-    <div class="container">
-      <h1 class="center-align" style="font-family: 'Gowun Batang', serif;">Haunted Dollhouse</h1>
+  <div class="container">
+    <h1 class="center-align" style="font-family: 'Gowun Batang', serif;">Haunted Dollhouse</h1>
 <!-- Navigation and logo. -->
-      <nav>
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo">Logo</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="#"><i class="fas fa-ghost" style=" margin-right: .5em;"></i> LOG IN</a></li>
-            <li><a href="#">Search</a></li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Logo</a>
+        <ul id="nav-mobile" class="right">
+          <li><a href="#"  style=" margin-right: 1em;"><i class="fas fa-baby-carriage" style=" margin-right: .5em;"></i> CART</a></li>
+          <li><a href="#"  style=" margin-right: 1em;"><i class="fas fa-ghost"  style=" margin-right: .5em;"></i> LOG IN</a></li>
+          <li><a href="#">Search</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 <!-- Carousel of haunted doll reviews. -->
-    <div class="carousel carousel-slider">
+    <div class="carousel carousel-slider hide-on-med-and-down">
       <a class="carousel-item" href="#one!"><img src="/public/images/slider1.png"></a>
       <a class="carousel-item" href="#two!"><img src="/public/images/slider1.png"></a>
       <a class="carousel-item" href="#three!"><img src="/public/images/slider1.png"></a>
      </div>
 <!-- Quick introduction to the site, including rating system. -->
 <div class="container">
-    <div class="row" style="text-align: center;">
-        <div class="col l4">
-            <p>I am a very simple card. I am good at containing small bits of information.
-            I am convenient because I require little markup to use effectively.</p>
+    <div class="row">
+        <div class="col l5">
+          <h2>About Us</h2>
+            <p>Haunted Dollhouse is the leading online retailer of doll vessels with attached spirits so active they're guaranteed to <strike> leave a pit of inconceivable dread in your stomach</strike> be a friend for life!</p>
         </div>
-        <div class="col l4">
-            <p>I am a very simple card. I am good at containing small bits of information.
-            I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="col l4">
-            <p>I am a very simple card. I am good at containing small bits of information.
-            I am convenient because I require little markup to use effectively.</p>
+        <div class="col l7">
+          <h2>Contribute</h2>
+            <center><p>Be a part of our community by rating each doll or leaving comments. And remember, if you take a doll home with you, be sure to leave a review.</p></center>
         </div>
     </div>
 </div>
@@ -57,7 +55,7 @@
               <img src="/public/images/product-example-1.jpg">
               <span class="card-title">Product Name</span>
 <!-- Add to cart button. Clicking on this will alert the user. -->
-              <a class="btn-floating halfway-fab waves-effect waves-light" onclick="M.toast({html: 'Added to cart!'})"><i class="fal fa-cart-plus"></i></a>
+              <a class="btn-floating halfway-fab waves-effect waves-light" onclick="M.toast({html: 'Added to cart!'})"><i class="fas fa-baby-carriage"></i></a>
             </div>
             <div class="card-content">
               <p>This is where the product description will go. A brief excerpt that can be truncated.</p>
@@ -73,7 +71,7 @@
               <div class="card-image">
                 <img src="/public/images/product-example-1.jpg">
                 <span class="card-title">Product Name</span>
-                <a class="btn-floating halfway-fab waves-effect waves-light" onclick="M.toast({html: 'Added to cart!'})"><i class="fal fa-cart-plus"></i></a>
+                <a class="btn-floating halfway-fab waves-effect waves-light" onclick="M.toast({html: 'Added to cart!'})"><i class="fas fa-baby-carriage"></i></a>
               </div>
               <div class="card-content">
                 <p>This is where the product description will go. A brief excerpt that can be truncated.</p>
@@ -89,7 +87,7 @@
               <div class="card-image">
                 <img src="/public/images/product-example-1.jpg">
                 <span class="card-title">Product Name</span>
-                <a class="btn-floating halfway-fab waves-effect waves-light" onclick="M.toast({html: 'Added to cart!'})"><i class="fal fa-cart-plus"></i></a>
+                <a class="btn-floating halfway-fab waves-effect waves-light" onclick="M.toast({html: 'Added to cart!'})"><i class="fas fa-baby-carriage"></i></a>
               </div>
               <div class="card-content">
                 <p>This is where the product description will go. A brief excerpt that can be truncated.</p>
@@ -105,7 +103,7 @@
               <div class="card-image">
                 <img src="/public/images/product-example-1.jpg">
                 <span class="card-title">Product Name</span>
-                <a class="btn-floating halfway-fab waves-effect waves-light" onclick="M.toast({html: 'Added to cart!'})"><i class="fal fa-cart-plus"></i></a>
+                <a class="btn-floating halfway-fab waves-effect waves-light" onclick="M.toast({html: 'Added to cart!'})"><i class="fas fa-baby-carriage"></i></a>
               </div>
               <div class="card-content">
                 <p>This is where the product description will go. A brief excerpt that can be truncated.</p>
@@ -123,7 +121,7 @@
             <div class="card-image">
               <img src="/public/images/product-example-1.jpg">
               <span class="card-title">Product Name</span>
-              <a class="btn-floating halfway-fab waves-effect waves-light" onclick="M.toast({html: 'Added to cart!'})"><i class="fal fa-cart-plus"></i></a>
+              <a class="btn-floating halfway-fab waves-effect waves-light" onclick="M.toast({html: 'Added to cart!'})"><i class="fas fa-baby-carriage"></i></a>
             </div>
             <div class="card-content">
               <p>This is where the product description will go. A brief excerpt that can be truncated.</p>
@@ -139,7 +137,7 @@
               <div class="card-image">
                 <img src="/public/images/product-example-1.jpg">
                 <span class="card-title">Product Name</span>
-                <a class="btn-floating halfway-fab waves-effect waves-light" onclick="M.toast({html: 'Added to cart!'})"><i class="fal fa-cart-plus"></i></a>
+                <a class="btn-floating halfway-fab waves-effect waves-light" onclick="M.toast({html: 'Added to cart!'})"><i class="fas fa-baby-carriage"></i></a>
               </div>
               <div class="card-content">
                 <p>This is where the product description will go. A brief excerpt that can be truncated.</p>
@@ -155,7 +153,7 @@
               <div class="card-image">
                 <img src="/public/images/product-example-1.jpg">
                 <span class="card-title">Product Name</span>
-                <a class="btn-floating halfway-fab waves-effect waves-light" onclick="M.toast({html: 'Added to cart!'})"><i class="fal fa-cart-plus"></i></a>
+                <a class="btn-floating halfway-fab waves-effect waves-light" onclick="M.toast({html: 'Added to cart!'})"><i class="fas fa-baby-carriage"></i></a>
               </div>
               <div class="card-content">
                 <p>This is where the product description will go. A brief excerpt that can be truncated.</p>
@@ -171,7 +169,7 @@
               <div class="card-image">
                 <img src="/public/images/product-example-1.jpg">
                 <span class="card-title">Product Name</span>
-                <a class="btn-floating halfway-fab waves-effect waves-light" onclick="M.toast({html: 'Added to cart!'})"><i class="fal fa-cart-plus"></i></a>
+                <a class="btn-floating halfway-fab waves-effect waves-light" onclick="M.toast({html: 'Added to cart!'})"><i class="fas fa-baby-carriage"></i></a>
               </div>
               <div class="card-content">
                 <p>This is where the product description will go. A brief excerpt that can be truncated.</p>
@@ -197,6 +195,17 @@
   </div>
 </div>
 </section>
+
+<!-- Optional carousel reviews.  Simply uncomment below to enable. -->
+<!-- <center><h5 style="padding:1em;">See what our customers are really saying!</h5></center>
+<div class="carousel carousel-slider center" id="reviews">
+  <div class="carousel-item" href="#one!">
+    <p class="white-text">"I like this doll. My daughter is going to love it. The outer box is awesome. I don’t have to wrap it, but will be. Opened it up and a cute story about the doll was displayed on top. There is a good amount of hair. There is a good amount of teeth. There are more limbs than expected. There is the sound of unending silence and despair. She looks just like my daughter. She looks just like my mother. She is all I see. If you are willing to wait out the shipping (it comes with tracking!), you will be delighted with the addition to your household. I will need for nothing ever again. Nothing. Nothing. Nothing. Nothing. Nothing. Nothing. Noth"</p>
+    <h4>- Jay F.</h4>
+  </div>
+  </div>
+</div> -->
+
 <!-- Footer is separated into Contact Us and links to socials. -->
 <footer class="page-footer">
   <div class="container">
@@ -207,13 +216,17 @@
     <p>6-666-666-666</p>
     <p>Live Chat Available Never</p>
     </div>
-    <div class="col l4 offset-l2 s12">
-     <ul>
-      <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-      <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-      <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-      <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-     </ul>
+    <div class="col l4 offset-l2 s12 right-align">
+      <h5>Links</h5>
+      <ul>
+        <li><a href="#!">ABOUT</a></li>
+        <li><a href="#!">STAFF</a></li>
+      </ul>
+      <ul id="socials">
+        <li><a href="#!"><i class="fab fa-instagram fa-3x"></i></a></li>
+        <li><a href="#!"><i class="fab fa-twitter-square fa-3x"></i></a></li>
+        <li><a href="#!"><i class="fab fa-ebay fa-3x"></i></a></li>
+       </ul>
     </div>
    </div>
   </div>

@@ -1,16 +1,18 @@
 const authorize = require("../utils/auth");
 const router = require("express").Router();
-const { Artifact, User } = require("../models");
+const { Artifact, Post, User } = require("../models");
 
 router.get("/", async (req, res) => {
   try {
+    console.log('Im working')
      const postData = await Post.findAll({
-       attributes: ['user','likes','dislikes','artifact_id'],
-       include: [{model: User}],
+       attributes: ['likes','dislikes','artifact_id'],
+  
        order: [["likes", "ASC"]],
      });
-
+    
      const posts = postData.map((post) => post.get ({plain: true}));
+
 
     res.render("homepage", {
       posts,
@@ -42,7 +44,9 @@ router.get('/signup', (req,res) => {
 res.render('signup');
 })
 
-
+router.get('/staff', (req,res) => {
+  res.render('staff');
+})
 //might add a profile page???
 
 module.exports = router;
