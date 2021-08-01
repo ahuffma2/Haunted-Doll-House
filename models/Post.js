@@ -21,12 +21,6 @@ Post.init(
             allowNull: false,
             defaultValue: 0,
         },
-        artifact_id: {
-            type: DataTypes.INTEGER,
-            // allowNull: false,  // gonna leave this commented for now. Might Break Things
-            model: 'artifact',
-            key: 'id',
-        },
     },
     {
         sequelize,

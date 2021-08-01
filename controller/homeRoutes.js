@@ -7,7 +7,7 @@ router.get("/", async (req, res) => {
     console.log('Im working')
      const postData = await Post.findAll({
        attributes: ['likes','dislikes','artifact_id'],
-  
+       include: [User,Artifact],
        order: [["likes", "ASC"]],
      });
     
