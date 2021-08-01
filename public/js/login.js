@@ -1,10 +1,10 @@
-const { response } = require("express");
+
 
 const loginHandler = async (event) => {
     event.preventDefault();
-
+    console.log('i have been summoned')
     //Grabs from id's Username and Password forms on login handlebars
-    const username = document.querySelector('.username').value.trim();
+    const username = document.querySelector('.username').value.trim();  
     const password = document.querySelector('.password').value.trim();
     //IF WE WNAT USER TO BE ABLE TO SIGN IN WITH THERE EMAIL WE CAN IMPLEMENT THAT
     const email = document.querySelector('.email').value.trim();
@@ -23,4 +23,6 @@ const loginHandler = async (event) => {
 
 }
 
-document.querySelector('.login_form').addEventListener('submit', loginHandler);
+document.querySelector('.login_form').addEventListener('submit', loginHandler);  
+//SOMEONES GONNA HAVE TO HELP ME GET THIS
+console.log( document.querySelector('.username').value.trim());  
