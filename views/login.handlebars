@@ -9,16 +9,18 @@
         <h1 class="center-align" style="font-family: 'Gowun Batang', serif;">Haunted Dollhouse</h1>
         <div id ="login">
             <center><h5>Please log in to continue.</h5></center>
-            <form>
+            {{!-- THIS FORM SYNTAX IS NEEDED FOR THE JS TO WORK --}}
+            {{!-- KEEP THIS IN MIND FOR THE SIGN-UP FORM --}}
+            <form class = 'form login_form'>  
                 <div class="row">
                     <div class="input-field">
-                      <input id="username" type="text" class="validate">
+                      <input class="username" id="username" type="text" class="validate">
                       <label for="username">Username</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field">
-                        <input id="password" type="password" class="validate">
+                        <input class="password" id="password" type="password" class="validate">
                         <label for="password">Password</label>
                     </div>
 
@@ -41,7 +43,5 @@
                 <center><a href="#" ><b>Create Account</b></a></center>
             </form>
         </div>    
-<script src="/public/js/materialize.js"></script>
-<script src="/public/js/script.js"></script>
 </body>
 </html>
