@@ -1,21 +1,19 @@
 const authorize = require("../utils/auth");
 const router = require("express").Router();
-const { Artifact, Post, User } = require("../models");
+const { Artifact, User } = require("../models");
 
 router.get("/", async (req, res) => {
   try {
     console.log('Im working')
-     const postData = await Post.findAll({
-       attributes: ['likes','dislikes','artifact_id'],
-       include: [User,Artifact],
+     const artifactData = await Artifact.findAll({
+       include: [User],
        order: [["likes", "ASC"]],
      });
     
-     const posts = postData.map((post) => post.get ({plain: true}));
-
+     const artifacts = artifactData.map((artifact) => artifact.get ({plain: true}));
 
     res.render("homepage", {
-      posts,
+      artifacts,
       logged_in: req.session.logged_in, //initialized logged_in
     });
 
