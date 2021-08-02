@@ -1,37 +1,38 @@
+<title>Haunted Dollhouse - Create New Post</title>
 <script src="/js/materialize.js"></script>
 <script src="/js/script.js"></script>
-
 <body style="background-image: url(/public/images/doll-ghost-bg.png); background-repeat:no-repeat; background-position: 110% 110%; background-attachment: scroll;">
     <div class="container">
-    <h1 class="center-align" style="font-family: 'Gowun Batang', serif;">Haunted Dollhouse</h1>
-     <form class="form post_form center-align">
-      <div class="form-group">
-        <label for="title_post">Title:</label>
-        <input class="form-input" type="text" id="title_post" />
-      </div>
-      <div class="form-group">
-        <label for="description_post">Description:</label>
-        <input class="form-input" type="text" id="description_post" />
-      </div>
-      <div class="form-group">
-        <label for="price_post">Price:</label>
-        <input class="form-input" type="text" id="price_post" />
-      </div>
-      <div class="form-group">
-        {{!-- UPLOAD FILE HERE --}}
- 
-        {{!-- CUTE LIL ICON GOES HERE --}}
-        {{!-- <label for="filename_post">Upload Image</label>
-      <input type="file"  accept="image/jpeg," name="image" id="filename_post" style="display: none;">
-        <hr> --}}
-
-        {{!-- Temp stuff ends here --}}
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">Post</button>
-      </div>
-    </form>
+      <h1 class="center-align" style="font-family: 'Gowun Batang', serif;">Haunted Dollhouse</h1>
+    <div id ="login">
+      <center><h5>Create new post</h5></center> 
+      <form class="form post_form center-align">
+        <div class="input-field">
+          <label for="title_post">Title:</label>
+          <input class="form-input" type="text" id="title_post" />
+        </div>
+        <div class="input-field">
+          <label for="description_post">Description:</label>
+          <input class="form-input" type="text" id="description_post" />
+        </div>
+        <div class="input-field">
+          <label for="price_post">Price:</label>
+          <input class="form-input" type="text" id="price_post" />
+        </div>
+        <div class="file-field input-field">
+            <div class="btn-small">
+                <span>Upload File</span>
+                <input type="file" multiple>
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text" placeholder="Upload an image. 500 x 500px recommended.">
+              </div>
+            </div>
+        <div class="input-field">
+          <button class="btn btn-primary" type="submit">Post</button>
+        </div>
+      </form>
+    </div>
   </div>
-</div>
-  <script src="/js/createPost.js"></script>
+  <script src="/js/signup.js"></script>
 </body>
