@@ -1,4 +1,4 @@
-<div class="col l3 m6">
+<div class="col l3 m6 Artifact">
     <div class="card">
         <div class="card-image">
             <img src='/images/{{filename}}.jpg'>
@@ -21,6 +21,8 @@
             <p>Price: ${{price}}</p>
     
             <a href = "/artifact/{{id}}" class="waves-effect waves-light btn">Read More</a>
+            <button class= "btn" delete-id="{{id}}">DELETE</button>
         </div>
     </div>
 </div>
+  <script src="/js/deletePost.js"></script>

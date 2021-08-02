@@ -26,7 +26,7 @@ router.get('/', async (req,res) => {
 
 });
 
-router.delete('/:id', authorize, async (req,res) => {
+router.delete('/:id', async (req,res) => {
     try{
         const artifactData = await Artifact.destroy({
             where: {
@@ -39,11 +39,9 @@ router.delete('/:id', authorize, async (req,res) => {
         res.status(404).json();
         return;
     }
-
     res.status(200).json(artifactData);
-    
     } catch (err) { res.status(500).json(err); }
-})
+});
 
 router.get('/:id' , (req,res) => {
     try{
