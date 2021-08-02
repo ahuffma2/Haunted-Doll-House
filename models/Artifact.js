@@ -22,7 +22,7 @@ Artifact.init(
         filename: {
             type: DataTypes.STRING,
             allowNull:false,
-            defaultValue:'product-example-1',
+            defaultValue:'1',
         },
         price: {
             type: DataTypes.DECIMAL(10,2),

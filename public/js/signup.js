@@ -32,9 +32,6 @@ const signupHandler = async (event) => {
         //alert("Please Make Sure No Fields Are Blank");    //MAKE THESE TOASTS SO WE DONT HAVE UGLY ALERTS
         M.toast({html: "Please Make Sure No Fields Are Blank"})
     }
-
-
-
 }
 
 document.querySelector('.signup_form').addEventListener('submit', signupHandler);
