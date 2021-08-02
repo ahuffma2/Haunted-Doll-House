@@ -1,11 +1,12 @@
 const router = require("express").Router();
+const { User } = require("../../models");
 const Artifact = require("../../models/Artifact");
 
 router.post('/', async (req,res) => {
     try {
         const newArtifact = await Artifact.create({
             ...req.body,
-            userId: req.session.userId});
+            userId: req.session.u_id})
         res.json(newArtifact);
     }catch (err) { res.status(500).json(err); }
 });
@@ -13,7 +14,7 @@ router.post('/', async (req,res) => {
 router.get('/', async (req,res) => {
     try{
         const artifactData = await Artifact.findAll({
-            include: [User],
+            include: [{ model: User }],
             order: [["likes", "ASC"]],
           });
          

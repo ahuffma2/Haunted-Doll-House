@@ -1,7 +1,6 @@
 const createPost = async (event) => {
     event.preventDefault();
 
-    console.log('i am being called')
     //these will fail until there are queries here
 
     const name = document.querySelector('#title_post').value.trim();

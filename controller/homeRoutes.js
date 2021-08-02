@@ -4,9 +4,8 @@ const { Artifact, User } = require("../models");
 
 router.get("/", async (req, res) => {
   try {
-    console.log('Im working')
      const artifactData = await Artifact.findAll({
-       include: [User],
+       include: [{model: User}],
        order: [["likes", "ASC"]],
      });
     
@@ -14,7 +13,7 @@ router.get("/", async (req, res) => {
 
     res.render("homepage", {
       artifacts,  
-      logged_in: req.session.logged_in, //initialized logged_in
+      logged_in: req.session.logged_in,
     });
 
   } catch (err) { res.status(500).json(err);  }
@@ -39,9 +38,10 @@ res.render('signup');
 })
 
 router.get('/staff', async (req,res) => {
+  try{
   res.render('staff');
+  } catch (err) { res.status(500).json(err);}
 })
-//might add a profile page???
 
 router.get('/artifact/:id', authorize, async (req,res) => {
   try{
