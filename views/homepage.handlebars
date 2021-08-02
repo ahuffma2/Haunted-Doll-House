@@ -34,8 +34,6 @@
           {{/if}}
            <li><a href="/post-create" style=" margin-right: 1em;" class= "create-post"><i class="fas fa-ghost"  style=" margin-right: .5em;"></i> Create Post</a></li>
  
-
-
         </ul>
       </div>
     </nav>
@@ -79,8 +77,9 @@
             <p>{{description}}</p>
           </div>
           <div class="card-action">
+
             {{!-- helper haunted calc needed here --}}
-            <p>Haunted Rating: 0</p> 
+          <p class="rating">Haunted Rating: 0</p> 
            
             {{#with user}}
              <hr>
@@ -161,6 +160,7 @@
 <script src="/js/deletePost.js"></script>
 {{/if}}
 
+  <script src="/js/randomHauntedScore.js"></script>
   <script src="/js/materialize.js"></script>
   <script src="/js/script.js"></script>
 
