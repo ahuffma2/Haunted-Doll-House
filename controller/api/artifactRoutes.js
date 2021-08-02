@@ -1,8 +1,9 @@
 const router = require("express").Router();
 const { User } = require("../../models");
 const Artifact = require("../../models/Artifact");
+const authorize = require("../../utils/auth");
 
-router.post('/', async (req,res) => {
+router.post('/', authorize, async (req,res) => {
     try {
         const newArtifact = await Artifact.create({
             ...req.body,
@@ -24,6 +25,25 @@ router.get('/', async (req,res) => {
     } catch (err) { res.status(500).json(err); }
 
 });
+
+router.delete('/:id', authorize, async (req,res) => {
+    try{
+        const artifactData = await Artifact.destroy({
+            where: {
+                id: req.params.id,
+                userId: req.session.u_id,
+            },
+        });
+
+    if(!artifactData) {
+        res.status(404).json();
+        return;
+    }
+
+    res.status(200).json(artifactData);
+    
+    } catch (err) { res.status(500).json(err); }
+})
 
 router.get('/:id' , (req,res) => {
     try{
