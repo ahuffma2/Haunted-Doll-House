@@ -44,7 +44,7 @@ nav ul a {
 }
 #products {
     background-color: #8C8E8A;
-    padding: 2em 4em;
+    padding: .5em 4em;
 }
 #reviews {
     background-color: #6b6f7b;
@@ -64,8 +64,8 @@ nav ul a {
     max-width: none;
 }
 .row {
-    margin-bottom: 40px;
-    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 .illustration {
     width: 80%;
@@ -74,9 +74,9 @@ nav ul a {
     margin: 2em 1em;
     background-color: #F2F2EE;
     color: #15171B;
-    box-shadow: 0px 0px 0px 5px #F2F2EE;
-    -webkit-box-shadow: 0px 0px 0px 5px #F2F2EE;
-    -moz-box-shadow: 0px 0px 0px 5px #F2F2EE;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
     border-radius: 0px;
 }
 .card .card-image img {
@@ -110,9 +110,13 @@ nav ul a {
     font-family: 'Lato', sans-serif;
     letter-spacing: .2em;
     border-radius: 0;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
 }
 .btn:hover {
     background-color: #15171b;
+    box-shadow: 0 5px 20px 0 #F2F2EE;
 }
 .btn-floating.halfway-fab {
     background-color: #6b6f7b;
@@ -155,7 +159,7 @@ nav ul a {
         display: block;
     }
     #products {
-        padding:1em;
+        padding: 1em;
         }
         .row {
             margin: 0;
