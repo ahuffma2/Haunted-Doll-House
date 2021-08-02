@@ -23,10 +23,14 @@ const signupHandler = async (event) => {
 
     response.ok 
        ? document.location.replace('/') //send to home page on successful login
-       : alert(await errorHandler(response));
+       //: alert(await errorHandler(response));
+       : M.toast({html: await errorHandler(response)})
     }
+    else if(password !== validatePassword)
+        M.toast(({html: "Passwords Don't Match"}))
     else {
-        alert("Please Make Sure No Fields Are Blank");    //MAKE THESE TOASTS SO WE DONT HAVE UGLY ALERTS
+        //alert("Please Make Sure No Fields Are Blank");    //MAKE THESE TOASTS SO WE DONT HAVE UGLY ALERTS
+        M.toast({html: "Please Make Sure No Fields Are Blank"})
     }
 
 

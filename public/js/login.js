@@ -24,11 +24,10 @@ const loginHandler = async (event) => {
 
     response.ok 
         ?  document.location.replace('/') // SEND TO HOME ON SUCCESSFUL LOGIN
-        :  alert(await errorHandler(response) )
-         //: M.toast(await errorHandler(response))
+        : M.toast({html: await errorHandler(response)})
     } 
     else {
-        alert("Please Make Sure No Fields Are Blank");    //MAKE THESE TOASTS SO WE DONT HAVE UGLY ALERTS
+        M.toast({html: "Please Make Sure No Fields Are Blank"})
     }
 
 }
