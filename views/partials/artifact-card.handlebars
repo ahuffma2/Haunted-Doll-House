@@ -11,9 +11,15 @@
         <div class="card-action">
             {{!-- helper haunted calc needed here --}}
             <p>Haunted Rating: 0</p> 
-            <p>Price: ${{price}}</p>
-            {{!-- <p>Posted By: {{}}</p> --}}
+           
+            {{#with user}}
+             <hr>
+            <p>Posted By: {{username}}</p>
+            {{/with}}
 
+            <hr>
+            <p>Price: ${{price}}</p>
+    
             <a href = "/artifact/{{id}}" class="waves-effect waves-light btn">Read More</a>
         </div>
     </div>
