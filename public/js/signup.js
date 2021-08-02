@@ -17,7 +17,7 @@ const signupHandler = async (event) => {
 
     response.ok 
        ? document.location.replace('/') //send to home page on successful login
-       : alert(response.statusText);
+       : alert(response.statusText.JSON);
     }
 
 
