@@ -46,7 +46,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-router.post('./login', async (req,res) => {
+router.post('/login', async (req,res) => {
   try{
     const user = await User.findOne({where: {username: req.body.username}})
     if(!user){
