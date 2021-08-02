@@ -21,11 +21,26 @@ body {
 }
 nav {
     background-color: #15171B;
+    box-shadow: none;
+    -webkit-box-shadow: none;
 }
 nav ul a {
     font-size: 1.5em;
     text-transform: uppercase;
     letter-spacing: 4px;
+    margin: 1.5em 0em;
+}
+#logo {
+    margin: 2em 2em 0em 0em;
+}
+#logo, #logo-text {
+    float: left;
+}
+#logo-text {
+    font-family: 'Gowun Batang', serif; 
+    color:white;
+    margin: .5em 0em;
+    text-align: center;
 }
 #products {
     background-color: #8C8E8A;
@@ -105,21 +120,28 @@ nav ul a {
     display:block;
     text-align: center;
 }
-/* Styling specific to the login page. */
+/* Styling specific to the login and sign up page. */
 #login {
     background-color: #F2F2EE;
     padding: 5em;
 }
 /* Minor cosmetic changes for smaller screens. */
 @media only screen and (max-width: 1028px) {
-#products {
-    padding:2em;
-    }
-    .card .card-image .card-title {
-        text-align: left;
-        padding-left: 1em;
-    }
-    .nav .brand-logo {
-        left: 10%;
-    }
+    #products {
+        padding:2em;
+        }
+        .card .card-image .card-title {
+            text-align: left;
+            padding-left: 1em;
+        }
+        .carousel {
+            height: 200px;
+        }
+        .carousel-item {
+            height: 200px;
+            transform: none;
+        }
+        nav ul a {
+            margin: 0;
+        }
 }

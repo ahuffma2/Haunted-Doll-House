@@ -14,16 +14,15 @@
 </head>
 <body>
   <div class="container">
-    <h1 class="center-align" style="font-family: 'Gowun Batang', serif;">Haunted Dollhouse</h1>
 <!-- Navigation and logo. -->
     <nav>
-      {{!-- {{#> layouts/main.handlebars }} --}}
+    {{!-- {{#> layouts/main.handlebars }} --}}
+      <img src="/public/images/logo.png" id="logo">
+      <a href="#"><h1 id="logo-text">Haunted Dollhouse</h1></a>
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Logo</a>
         <ul id="nav-mobile" class="right">
           <li><a href="#"  style=" margin-right: 1em;"><i class="fas fa-baby-carriage" style=" margin-right: .5em;"></i> CART</a></li>
-          <li><a href="/login"  style=" margin-right: 1em;"><i class="fas fa-ghost"  style=" margin-right: .5em;"></i> LOG IN</a></li>
-          <li><a href="#">Search</a></li>
+          <li><a href="#"  style=" margin-right: 1em;"><i class="fas fa-ghost"  style=" margin-right: .5em;"></i> LOG IN</a></li>
         </ul>
       </div>
     </nav>
@@ -36,18 +35,19 @@
       <a class="carousel-item" href="#three!"><img src="/images/slider1.png"></a>
      </div>
 <!-- Quick introduction to the site, including rating system. -->
-<div class="container">
+  <div class="container">
     <div class="row">
-        <div class="col l5">
+      <div class="col l5" style="text-align:justify;">
           <h2>About Us</h2>
-            <p>Haunted Dollhouse is the leading online retailer of doll vessels with attached spirits so active they're guaranteed to <strike> leave a pit of inconceivable dread in your stomach</strike> be a friend for life!</p>
-        </div>
-        <div class="col l7">
+          <p>Haunted Dollhouse is the leading online retailer of doll vessels with attached spirits so active they're guaranteed to <strike> leave a pit of inconceivable dread in your stomach</strike> be a friend for life!</p>
           <h2>Contribute</h2>
-            <center><p>Be a part of our community by rating each doll or leaving comments. And remember, if you take a doll home with you, be sure to leave a review.</p></center>
-        </div>
+          <p>Be a part of our community by rating each doll or leaving comments. And remember, if you take a doll home with you, be sure to leave a review.</p>
+      </div>
+      <div class="col l7">
+        <center><img src="public/images/doll-ghost-illustration.png" width="80%"></center>
+      </div>
     </div>
-</div>
+  </div>
 <!-- Product listings. Larger screens will see rows of four, medium screens rows of two, and mobile rows of one.-->
 <section id="products">
     <div class="row">
@@ -87,7 +87,6 @@
             </div>
               </div>
           </div>
-      
           <div class="col l3 m6">
             <div class="card">
               <div class="card-image">
