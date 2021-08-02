@@ -24,10 +24,10 @@ const loginHandler = async (event) => {
 
     response.ok 
         ?  document.location.replace('/') // SEND TO HOME ON SUCCESSFUL LOGIN
-        :  alert(await errorHandler(response))// WE CAN HAVE A MODAL POP UP TRIGGERED BY THIS LINE
+        : M.toast({html: await errorHandler(response)})
     } 
     else {
-        alert("Please Make Sure No Fields Are Blank");
+        M.toast({html: "Please Make Sure No Fields Are Blank"})
     }
 
 }
