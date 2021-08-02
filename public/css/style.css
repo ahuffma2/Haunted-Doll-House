@@ -2,6 +2,10 @@ h2 {
     font-size: 2.5em;
     text-align: center;
     letter-spacing: .2em;
+    text-decoration-line: underline;
+    text-decoration-style: "solid";
+    text-decoration-color: #F2F2EE;
+    text-decoration-thickness: 1px;
 }
 h2, h5, h3 {
     color: #6b6f7b;
@@ -10,6 +14,7 @@ h2, h5, h3 {
 h3 {
     letter-spacing: .1em;
     text-align: center;
+
 }
 a {
     color: #F2F2EE;
@@ -130,6 +135,13 @@ nav ul a {
 }
 .btn-floating i {
     line-height: 60px;
+}
+.btn-small {
+    background-color: #6b6f7b;
+}
+.btn-small:hover {
+    background-color: #15171b;
+    box-shadow: 0 5px 20px 0 #F2F2EE;
 }
 .toast {
     background-color: #15171B;
