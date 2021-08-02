@@ -1,7 +1,16 @@
+//TABLE OF CONTENTS
+//--HOME--
+//--LOGIN--
+//--SIGNUP--
+//--STAFF--
+//--INDIVIDUAL ARTIFACT--
+//--POST CREATION--
+
 const authorize = require("../utils/auth");
 const router = require("express").Router();
 const { Artifact, User } = require("../models");
 
+//HOME
 router.get("/", async (req, res) => {
   try {
      const artifactData = await Artifact.findAll({
@@ -20,6 +29,7 @@ router.get("/", async (req, res) => {
   } catch (err) { res.status(500).json(err);  }
 });
 
+//LOGIN
 router.get("/login", async (req, res) => {
   try {
     if (req.session.logged_in) {
@@ -30,6 +40,7 @@ router.get("/login", async (req, res) => {
   } catch (err) { res.status(500).json(err);}
 });
 
+//SIGNUP
 router.get('/signup', (req,res) => {
   if(req.session.logged_in) {
     res.redirect('/');
@@ -38,29 +49,32 @@ router.get('/signup', (req,res) => {
 res.render('signup');
 })
 
+
+//STAFF PAGE
 router.get('/staff', async (req,res) => {
   try{
   res.render('staff');
   } catch (err) { res.status(500).json(err);}
 })
 
+
+//INDIVIDUAL ARTIFACT
 router.get('/artifact/:id', authorize, async (req,res) => {
   try{
-  const artifactData = await Artifact.findByPk(req.params.id, 
-  {
-    include: [User,Comment]
-  });
-  
-  const artifact = artifactData.map((artifact) => artifact.get ({plain: true}));
 
-  res.render('artifact' ,{
-    ...artifact,
-    logged_in: req.session.logged_in,
-  })
+    // const artifactData = await Artifact.findByPk(req.params.id, 
+    // {
+    //   include: [User,Comment]
+    // });
+    // const artifact = artifactData.map((artifact) => artifact.get ({plain: true}));
+
+    res.render('artifact');
   } catch (err) { res.status(500).json(err);}
 
 })
 
+
+//POST CREATION PAGE
 router.get('/post-create', authorize, async (req,res) => {
   try{
       res.render('post-create' ,{
