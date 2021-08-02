@@ -8,7 +8,7 @@ h2, h5 {
     letter-spacing: .2em;
 }
 a {
-    color: #7f8280;
+    color: #F2F2EE;
 }
 p, a {
     font-family: 'Lato', sans-serif;
@@ -44,7 +44,7 @@ nav ul a {
 }
 #products {
     background-color: #8C8E8A;
-    padding: 4em 8em;
+    padding: .5em 4em;
 }
 #reviews {
     background-color: #6b6f7b;
@@ -60,20 +60,27 @@ nav ul a {
     display: inline;
     margin: 0em .5em;
 }
-.row {
-    margin-bottom: 40px;
-    margin-top: 40px;
+.container {
+    max-width: none;
 }
-.page-footer {
-    background-color: #0a0a0b;
+.row {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.illustration {
+    width: 80%;
 }
 .card {
-    margin: 1em;
+    margin: 2em 1em;
     background-color: #F2F2EE;
     color: #15171B;
-    box-shadow: 4px rgba(127,130,128,1);
-    -webkit-box-shadow: 4px rgba(127,130,128,1);
-    -moz-box-shadow: 4px rgba(127,130,128,1);
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    border-radius: 0px;
+}
+.card .card-image img {
+    border-radius: 0px;
 }
 .card .card-action {
     text-align: center;
@@ -87,20 +94,35 @@ nav ul a {
     width: 100%;
     padding: .2em;
 }
+/* This effectively truncates the description of each product. */
+.card .card-content p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 90px;
+}
 .btn {
     width: 100%;
     background-color: #6b6f7b;
     font-size: 1em;
     font-family: 'Lato', sans-serif;
     letter-spacing: .2em;
+    border-radius: 0;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
 }
 .btn:hover {
     background-color: #15171b;
+    box-shadow: 0 5px 20px 0 #F2F2EE;
 }
 .btn-floating.halfway-fab {
     background-color: #6b6f7b;
     height: 60px;
     width: 60px;
+    right: 14px;
 }
 .btn-floating i {
     line-height: 60px;
@@ -119,6 +141,9 @@ nav ul a {
 .pagination li.active {
     background-color: #7f8280;
 }
+.page-footer {
+    background-color: #0a0a0b;
+}
 .page-footer .footer-copyright {
     display:block;
     text-align: center;
@@ -130,8 +155,20 @@ nav ul a {
 }
 /* Minor cosmetic changes for smaller screens. */
 @media only screen and (max-width: 1028px) {
+    #logo {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
     #products {
-        padding:2em;
+        padding: 1em;
+        }
+        .row {
+            margin: 0;
+        }
+        .illustration {
+            width: 100%;
         }
         .card .card-image .card-title {
             text-align: left;
