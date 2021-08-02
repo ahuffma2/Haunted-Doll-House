@@ -1,11 +1,15 @@
 h2 {
     font-size: 2.5em;
     text-align: center;
+    letter-spacing: .2em;
 }
-h2, h5 {
+h2, h5, h3 {
     color: #6b6f7b;
     text-transform: uppercase;
-    letter-spacing: .2em;
+}
+h3 {
+    letter-spacing: .1em;
+    text-align: center;
 }
 a {
     color: #F2F2EE;
@@ -134,7 +138,6 @@ nav ul a {
     top: 70%;
     right: 30%;
 }
-
 /* Pagination customization. */
 .pagination {
     text-align: center;
@@ -153,6 +156,13 @@ nav ul a {
 #login {
     background-color: #F2F2EE;
     padding: 5em;
+}
+/* Styling specific to the staff page. */
+.staff-photo {
+    width: 170px;
+    margin: auto;
+    display: block;
+    border-radius: 100%;
 }
 /* Minor cosmetic changes for smaller screens. */
 @media only screen and (max-width: 1028px) {
