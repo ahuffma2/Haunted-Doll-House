@@ -1,5 +1,3 @@
-
-
 const loginHandler = async (event) => {
     event.preventDefault();
     console.log('i have been summoned')
