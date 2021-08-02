@@ -28,6 +28,23 @@ Artifact.init(
             type: DataTypes.DECIMAL(10,2),
             allowNull: true,
         },
+        likes: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            defaultValue: 0,
+        },
+        dislikes: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            defaultValue: 0,
+        },      
+        userId: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'user',
+                key: 'id',
+            }
+        },
     },
     {
         sequelize,
