@@ -3,9 +3,8 @@ const Artifact = require("../../models/Artifact");
 
 router.post('/', async (req,res) => {
     try {
-        const content = req.body;
         const newArtifact = await Artifact.create({
-            content, 
+            ...req.body,
             userId: req.session.userId});
         res.json(newArtifact);
     }catch (err) { res.status(500).json(err); }
