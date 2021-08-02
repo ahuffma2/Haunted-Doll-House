@@ -4,6 +4,7 @@ h2 {
 }
 h2, h5 {
     color: #6b6f7b;
+    text-transform: uppercase;
 }
 a {
     color: #7f8280;
@@ -23,6 +24,7 @@ nav {
 nav ul a {
     font-size: 1.5em;
     text-transform: uppercase;
+    letter-spacing: 4px;
 }
 #products {
     background-color: #8C8E8A;
@@ -46,6 +48,7 @@ nav ul a {
     background-color: #0a0a0b;
 }
 .card {
+    margin: 1em;
     background-color: #F2F2EE;
     color: #15171B;
     box-shadow: 4px rgba(127,130,128,1);
@@ -81,6 +84,10 @@ nav ul a {
 .btn-floating i {
     line-height: 60px;
 }
+.toast {
+    background-color: #15171B;
+    font-size: 1.5em;
+}
 /* Pagination customization. */
 .pagination {
     text-align: center;
@@ -97,9 +104,16 @@ nav ul a {
     background-color: #F2F2EE;
     padding: 5em;
 }
-/* Reduces padding for the product listings on smaller screens. */
+/* Minor cosmetic changes for smaller screens. */
 @media only screen and (max-width: 1028px) {
 #products {
     padding:2em;
+    }
+    .card .card-image .card-title {
+        text-align: left;
+        padding-left: 1em;
+    }
+    .nav .brand-logo {
+        left: 10%;
     }
 }
