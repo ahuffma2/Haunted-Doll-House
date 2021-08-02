@@ -14,6 +14,7 @@ router.get("/", async (req, res) => {
     res.render("homepage", {
       artifacts,  
       logged_in: req.session.logged_in,
+      username: req.session.username,
     });
 
   } catch (err) { res.status(500).json(err);  }

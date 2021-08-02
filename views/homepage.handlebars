@@ -21,6 +21,10 @@
       <a href="#"><h1 id="logo-text">Haunted Dollhouse</h1></a>
       <div class="nav-wrapper">
         <ul id="nav-mobile" class="right">
+
+          {{!-- DOES NOT SCALE GREAT WITH MOBILE --}}
+          <li><a style=" margin-right: 5em;"><i class="fas fa-ghost"  style=" margin-right: .5em;"></i>Welcome {{username}}!</a></li>
+          
           <li><a href="#"  style=" margin-right: 1em;"><i class="far fa-baby-carriage" style=" margin-right: .5em;"></i> CART</a></li>
 
           {{#if logged_in}}
@@ -29,6 +33,8 @@
           <li><a href="/login"  style=" margin-right: 1em;"><i class="fas fa-ghost"  style=" margin-right: .5em;"></i> LOG IN</a></li>
           {{/if}}
            <li><a href="/post-create" style=" margin-right: 1em;" class= "create-post"><i class="fas fa-ghost"  style=" margin-right: .5em;"></i> Create Post</a></li>
+ 
+
 
         </ul>
       </div>
