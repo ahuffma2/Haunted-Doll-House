@@ -13,13 +13,11 @@ router.get("/", async (req, res) => {
      const artifacts = artifactData.map((artifact) => artifact.get ({plain: true}));
 
     res.render("homepage", {
-      artifacts,
+      artifacts,  
       logged_in: req.session.logged_in, //initialized logged_in
     });
 
-  } catch (err) {
-    res.status(500).json(err);
-  }
+  } catch (err) { res.status(500).json(err);  }
 });
 
 router.get("/login", async (req, res) => {
@@ -29,9 +27,7 @@ router.get("/login", async (req, res) => {
       return;
     }
     res.render("login");
-  } catch (err) {
-    res.status(500).json(err);
-  }
+  } catch (err) { res.status(500).json(err);}
 });
 
 router.get('/signup', (req,res) => {
@@ -42,9 +38,25 @@ router.get('/signup', (req,res) => {
 res.render('signup');
 })
 
-router.get('/staff', (req,res) => {
+router.get('/staff', async (req,res) => {
   res.render('staff');
 })
 //might add a profile page???
 
+router.get('/artifact/:id', authorize, async (req,res) => {
+  try{
+  const artifactData = await Artifact.findByPk(req.params.id, 
+  {
+    include: [User,Comment]
+  });
+  
+  const artifact = artifactData.map((artifact) => artifact.get ({plain: true}));
+
+  res.render('artifact' ,{
+    ...artifact,
+    logged_in: req.session.logged_in,
+  })
+  } catch (err) { res.status(500).json(err);}
+
+})
 module.exports = router;
