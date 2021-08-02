@@ -17,7 +17,7 @@ const loginHandler = async (event) => {
 
     response.ok 
         ?  document.location.replace('/') // SEND TO HOME ON SUCCESSFUL LOGIN
-        :  alert (response.statusText) // WE CAN HAVE A MODAL POP UP TRIGGERED BY THIS LINE
+        :  alert (response.status) // WE CAN HAVE A MODAL POP UP TRIGGERED BY THIS LINE
     }
 }
 
