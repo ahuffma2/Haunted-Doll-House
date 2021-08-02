@@ -1,5 +1,4 @@
-<script src="/js/materialize.js"></script>
-<script src="/js/script.js"></script>
+
 
 <body style="background-image: url(/public/images/doll-ghost-bg.png); background-repeat:no-repeat; background-position: 110% 110%; background-attachment: scroll;">
     <div class="container">
@@ -20,6 +19,8 @@
       <div class="form-group">
         {{!-- UPLOAD FILE HERE --}}
  
+        <label for="price_post">Image Name:</label>
+        <input class="form-input" type="text" id="filename_post" />
         {{!-- CUTE LIL ICON GOES HERE --}}
         {{!-- <label for="filename_post">Upload Image</label>
       <input type="file"  accept="image/jpeg," name="image" id="filename_post" style="display: none;">
@@ -33,5 +34,7 @@
     </form>
   </div>
 </div>
+  <script src="/js/materialize.js"></script>
+  <script src="/js/script.js"></script>
   <script src="/js/createPost.js"></script>
 </body>

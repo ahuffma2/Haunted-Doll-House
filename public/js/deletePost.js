@@ -1,4 +1,4 @@
-const deleteP = async (event) => {
+const deletePost = async (event) => {
     if(event.target.hasAttribute('delete-id')) {
         const id = event.target.getAttribute('delete-id');
 
@@ -8,9 +8,15 @@ const deleteP = async (event) => {
 
         res.ok 
           ? document.location.replace('/')
-          : alert("Can't Delete This Artifact")
+          : M.toast({html: 'You are not authorized to delete this post'})
     }
 }
 
-console.log(document.querySelector('.Artifact'))
-document.querySelector('.Artifact').addEventListener('click', deleteP);
+//This for loop is needed due to querySelected only grabbing the first element
+let artifacts = document.getElementsByClassName("Artifact");
+Array.from(artifacts).forEach((el) => {
+    el.addEventListener('click',deletePost)
+})
+
+//THIS IS LAME AND ONLY SELECTS ONE
+//document.querySelector('.Artifact').addEventListener('click', deleteP);
