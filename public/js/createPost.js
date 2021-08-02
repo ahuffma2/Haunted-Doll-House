@@ -12,13 +12,12 @@ const createPost = async (event) => {
     const name = document.querySelector('#title_post').value.trim();
     const description = document.querySelector('#description_post').value.trim();
     const price = document.querySelector('#price_post').value.trim();
-    const filename = document.querySelector('#filename_post').value.trim();
+    const filename = document.getElementById('filename_post').value;
 
-    if(filename == ''){
     if(name && description && price) {
         const response = await fetch('/api/artifacts/', {
             method: 'POST',
-            body: JSON.stringify({name,description,price}),
+            body: JSON.stringify({name,description,price,filename}),
             headers: { 'Content-Type': 'application/json' },
         });
         response.ok 
@@ -29,22 +28,6 @@ const createPost = async (event) => {
          M.toast({html: 'Post Creation Failed. Fill out all fields'})
          return
      }
-    }
-    
-    
-    else if (filename != ''){ 
-        const response = await fetch('/api/artifacts/', {
-            method: 'POST',
-            body: JSON.stringify({name,description,price,filename}),
-            headers: { 'Content-Type': 'application/json' },
-        });
-    
-    response.ok 
-       ? document.location.replace('/') //send to home page on successful post creation
-       : M.toast({html: errorHandler(response)})
-    }
-    else
-        M.toast({html: 'Post Creation Failed. Fill out all fields'})
 }
 
 //IN PROGRESS FOR IMAGE UPLOADING
