@@ -1,3 +1,7 @@
+
+
+//NOT IN USE
+
 const {Model, DataTypes, DATE } = require('sequelize');
 const sequelize = require('../config/connection');
 

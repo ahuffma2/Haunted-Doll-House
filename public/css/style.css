@@ -130,6 +130,9 @@ nav ul a {
 .toast {
     background-color: #15171B;
     font-size: 1.5em;
+    min-width: 8%;
+    top: 70%;
+    right: 30%;
 }
 /* Pagination customization. */
 .pagination {

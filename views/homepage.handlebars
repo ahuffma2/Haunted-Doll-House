@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Lato:wght@100;400;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/149db67dc4.js" crossorigin="anonymous"></script>
+    <script src="/js/materialize.js"></script>
+  <script src="/js/script.js"></script>
   <title>Haunted Dollhouse</title>
 </head>
 <body>
@@ -28,6 +30,7 @@
           {{else}}
           <li><a href="/login"  style=" margin-right: 1em;"><i class="fas fa-ghost"  style=" margin-right: .5em;"></i> LOG IN</a></li>
           {{/if}}
+           <li><a href="/post-create" style=" margin-right: 1em;" class= "create-post"><i class="fas fa-ghost"  style=" margin-right: .5em;"></i> Create Post</a></li>
 
         </ul>
       </div>
@@ -105,9 +108,9 @@
         <li><a href="#!">STAFF</a></li>
       </ul>
       <ul id="socials">
-        <li><a href="#!"><i class="fab fa-instagram fa-3x"></i></a></li>
-        <li><a href="#!"><i class="fab fa-twitter-square fa-3x"></i></a></li>
-        <li><a href="#!"><i class="fab fa-ebay fa-3x"></i></a></li>
+        <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram fa-3x"></i></a></li>
+         <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter-square fa-3x"></i></a></li>
+         <li><a href="https://ebay.com" target="_blank"><i class="fab fa-ebay fa-3x"></i></a></li>
        </ul>
     </div>
    </div>
@@ -117,9 +120,6 @@
   </div>
 </div>
  </footer>
-<!-- Calling in Materialize, additional js files needed. -->
-<script src="/js/materialize.js"></script>
-<script src="/js/script.js"></script>
 
 {{#if logged_in}}
 <script src= "/js/logout.js"></script>
