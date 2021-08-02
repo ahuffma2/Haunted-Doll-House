@@ -1,39 +1,36 @@
 <title>Haunted Dollhouse - Log In</title>
 <body>
-    <div class="container">
-        <h1 class="center-align" style="font-family: 'Gowun Batang', serif;">Haunted Dollhouse</h1>
-        <div id ="login">
-            <center><h5>Please log in to continue.</h5></center>
+  <div class="container">
+    <h1 class="center-align" style="font-family: 'Gowun Batang', serif;">Haunted Dollhouse</h1>
+      <div id ="login">
+        <center><h5>Please log in to continue.</h5></center>
             {{!-- THIS FORM SYNTAX IS NEEDED FOR THE JS TO WORK --}}
             {{!-- KEEP THIS IN MIND FOR THE SIGN-UP FORM --}}
-            <form class ="form login_form">  
-                <div class="row">
-                    <div class="input-field">
-                      <input class="username" id="username" type="text" class="validate">
-                      <label for="username">Username</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field">
-                        <input class="password" id="password" type="password" class="validate">
-                        <label for="password">Password</label>
-                    </div>
-                    <form action="#">
-                        <p>
-                          <label>
-                            <input type="checkbox" />
-                            <span>Remember Me</span>
-                          </label>
-                        </p>
-                        </form>
-                    <br>
-                    {{!-- Gonna not worry bout this one --}}
-                        {{!-- <a href="#" style="float: right;"><b>Forgot Password?</b></a> --}}
-                </div>
-                <div class="row">
-                    <button type="submit" name="login" class="btn btn-large waves-effect">Login</button>
-                </div>
-                <center><a href="/signup" ><b>Create Account</b></a></center>
-            </form>
-        </div>    
+        <form class ="form login_form">  
+          <div class="row">
+            <div class="input-field">
+              <input class="username" id="username" type="text" class="validate">
+                <label for="username">Username</label>
+             </div>
+            </div>
+          <div class="row">
+            <div class="input-field">
+              <input class="password" id="password" type="password" class="validate">
+                <label for="password">Password</label>
+            </div>
+        <form action="#">
+          <p>
+            <label>
+              <input type="checkbox" />
+                <span>Remember Me</span>
+            </label>
+          </p>
+        </form>
+  </div>
+    <div class="row">
+      <button type="submit" name="login" class="btn btn-large waves-effect">Login</button>
+     </div>
+    <center><a href="/signup" ><b>Create Account</b></a></center>
+     </form>
+  </div>    
 </body>
