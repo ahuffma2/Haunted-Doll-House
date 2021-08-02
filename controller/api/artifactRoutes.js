@@ -10,8 +10,15 @@ router.post('/', async (req,res) => {
     }catch (err) { res.status(500).json(err); }
 });
 
-router.get('/', (req,res) => {
+router.get('/', async (req,res) => {
     try{
+        const artifactData = await Artifact.findAll({
+            include: [User],
+            order: [["likes", "ASC"]],
+          });
+         
+          const artifacts = artifactData.map((artifact) => artifact.get ({plain: true}));
+          res.json(artifacts);
 
     } catch (err) { res.status(500).json(err); }
 
