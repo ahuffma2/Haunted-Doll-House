@@ -20,7 +20,7 @@ As a person who is really into cursed artifacts, I want to know where I can find
 ## Breakdown Of Tasks:
 
 * Andrew: Front-end handlebars, adding images to site, read-me, presentation, seeds.
-* Austin:
+* Austin: API Creation, Routing, DB Models, Relations, Handlebars, Login, Logout, Signup, Post Creation,Deletion,Server,Heroku-Hosting
 * Haley:
 * Ebad: userRoutes GET and POST requests with the database, model/user.js, functional footer.
 
