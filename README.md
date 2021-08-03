@@ -17,6 +17,7 @@ As a person who is really into cursed artifacts, I want to know where I can find
 
 ## Wireframe:
 
+![](public/images/wire-frame.png)
 ## Breakdown Of Tasks:
 
 * Andrew: Front-end handlebars, adding images to site, read-me, presentation, seeds.
