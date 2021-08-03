@@ -1,5 +1,8 @@
 # PROJECT TWO: A HAUNTED DOLL HOUSE
 
+![](public/images/site-screenshot.png)
+## [Website](https://haunted-doll-house.herokuapp.com/)
+
 ## Checklist:
 
 * Search for different artifacts
@@ -20,13 +23,15 @@ As a person who is really into cursed artifacts, I want to know where I can find
 ![](public/images/wire-frame.png)
 ## Breakdown Of Tasks:
 
-* Andrew: Front-end handlebars, adding images to site, read-me, presentation, seeds.
+* Andrew: Front-end handlebars, adding images to site, read-me, presentation, seeds
 * Austin: API Creation, Routing, DB Models, Relations, Handlebars, Login, Logout, Signup, Post Creation,Deletion,Server,Heroku-Hosting
-* Haley:
-* Ebad: userRoutes GET and POST requests with the database, model/user.js, functional footer.
+* Haley: Illustration, Front End Design, and Creation
+* Ebad: userRoutes GET and POST requests with the database, model/user.js, functional footer
 
 ## Features:
 
-* Homepage that allows a user to login, search for different artifacts, or create their own post about 
-*
+* Page for users to login into forum as well as sign up
+* Page allowing users to create their own posts.
+* GET and POST requests with database.
+* Search page allowing users to search for different artifacts.
 
