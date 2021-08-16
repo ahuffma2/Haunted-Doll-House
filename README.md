@@ -1,4 +1,4 @@
-# PROJECT TWO: A HAUNTED DOLL HOUSE
+#HAUNTED DOLLHOUSE
 
 ![](public/images/site-screenshot.png)
 ## [Website](https://haunted-doll-house.herokuapp.com/)
